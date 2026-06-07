@@ -473,7 +473,7 @@
     .memory-film-track {
       display: flex !important;
       width: max-content !important;
-      animation: familyReelMove 240s linear infinite !important;
+      animation: familyReelMove 480s linear infinite !important;
       will-change: transform;
     }
 
@@ -901,7 +901,7 @@
     .memory-film-track.is-ready {
       display: flex !important;
       width: max-content !important;
-      animation: familyReelMove 240s linear infinite !important;
+      animation: familyReelMove 480s linear infinite !important;
       will-change: transform;
     }
 
@@ -929,6 +929,38 @@
       .memory-film-track:focus {
         animation-play-state: running !important;
       }
+    }
+
+  
+    /* MEMORY REEL FLEXIBLE IMAGE FIT - KEEPS DESIGN, PREVENTS CROPPING */
+    .memory-film-frame {
+      isolation: isolate !important;
+    }
+
+    .memory-film-frame .memory-bg {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      filter: blur(12px) brightness(.62) saturate(1.08) !important;
+      transform: scale(1.14) !important;
+      z-index: 0 !important;
+    }
+
+    .memory-film-frame .memory-main {
+      position: relative !important;
+      z-index: 1 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      padding: 4px !important;
+      filter: saturate(1.02) contrast(1.02) !important;
+    }
+
+    .memory-film-frame:hover .memory-main {
+      transform: scale(1.035) !important;
     }
 
   </style>
@@ -1263,7 +1295,8 @@
 
         track.innerHTML = reelPhotos.map((photo, index) => `
           <div class="memory-film-frame">
-            <img src="${photo.url}" alt="Dad memory ${index + 1}" loading="${index < 8 ? "eager" : "lazy"}" decoding="async" />
+            <img class="memory-bg" src="${photo.url}" alt="" aria-hidden="true" loading="${index < 8 ? "eager" : "lazy"}" decoding="async" />
+            <img class="memory-main" src="${photo.url}" alt="Dad memory ${index + 1}" loading="${index < 8 ? "eager" : "lazy"}" decoding="async" />
           </div>
         `).join("");
 
