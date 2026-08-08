@@ -1224,6 +1224,121 @@
       }
     }
 
+  
+    /* HERO UPDATE - CLEAN EMOTIONAL INVITATION */
+    .hero-inner-clean {
+      grid-template-columns: 1fr !important;
+      max-width: 1180px !important;
+      align-items: end !important;
+    }
+
+    .hero-panel {
+      max-width: 760px !important;
+      background: rgba(15, 11, 8, .44) !important;
+      border: 1px solid rgba(255,255,255,.18) !important;
+      border-radius: 32px !important;
+      padding: 30px !important;
+      backdrop-filter: blur(10px) !important;
+      box-shadow: 0 22px 60px rgba(0,0,0,.28) !important;
+    }
+
+    .hero-panel h1 {
+      margin-bottom: 12px !important;
+    }
+
+    .hero-subline {
+      color: rgba(255,255,255,.88) !important;
+      font-size: clamp(18px, 2.2vw, 25px) !important;
+      font-weight: 850 !important;
+      margin: 0 0 14px !important;
+      text-shadow: 0 3px 18px rgba(0,0,0,.55) !important;
+    }
+
+    .hero-panel .hero-copy {
+      max-width: 680px !important;
+      margin-bottom: 22px !important;
+    }
+
+    @media (max-width: 960px) {
+      .hero-panel {
+        max-width: 100% !important;
+        padding: 22px !important;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-panel {
+        padding: 20px !important;
+        border-radius: 24px !important;
+      }
+    }
+
+  
+    /* FINAL CLOSING + MOBILE VIDEO SAFETY */
+    .closing-copy {
+      font-size: 18px !important;
+      max-width: 880px !important;
+      margin: 0 auto 22px !important;
+      line-height: 1.55 !important;
+    }
+
+    .closing-points {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .closing-points span {
+      background: var(--sand);
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+    /* Keep the elephant mouse hero video reliable on mobile */
+    .hero-bg-video {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center center !important;
+      z-index: 0 !important;
+      display: block !important;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        min-height: 88svh !important;
+      }
+
+      .hero-bg-video {
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: scale(1.01) !important;
+      }
+
+      .closing-copy {
+        font-size: 15.5px !important;
+        line-height: 1.5 !important;
+      }
+
+      .closing-points {
+        justify-content: flex-start;
+      }
+
+      .closing-points span {
+        font-size: 13px;
+        padding: 9px 12px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1242,29 +1357,20 @@
   </nav>
 
   <header class="hero">
-    
     <video class="hero-bg-video" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-hidden="true">
       <source src="videos/mouse-vertical.mp4" type="video/mp4" media="(max-width: 700px)" />
       <source src="videos/mouse.mp4" type="video/mp4" />
     </video>
-<div class="hero-inner">
-      <div>
+
+    <div class="hero-inner hero-inner-clean">
+      <div class="hero-panel">
         <div class="pill">🚗 Dad’s 70th Birthday Roadtrip</div>
-        <h1>Kagga Kamma x Tankwa Karoo</h1>
-        <p class="hero-copy">An exciting celebration begins in the beauty of the vineyards and carries us into a desert getaway from 12–15 November — built around big skies, cave stays, braais, stargazing, roadtrip moments, and a family celebration made for memories.</p>
+        <h1>Dad’s 70th in the Karoo</h1>
+        <p class="hero-subline">Kagga Kamma x Tankwa Karoo • 12–15 November</p>
+        <p class="hero-copy">A family roadtrip into big skies, Karoo stays, braais, stargazing, and memories made properly.</p>
         <div class="button-row">
-          <a class="button light" href="#itinerary">12–15 November</a>
-          <a class="button glass" href="#music">Roadtrip soundtrack</a>
-        </div>
-      </div>
-      <div class="vibe">
-        <h2>The vibe</h2>
-        <p>Fun, fun… a little wild, a little luxe, lots of family time, very South African, and absolutely worth the drive.</p>
-        <div class="chip-grid">
-          <div class="chip">Sundowners</div>
-          <div class="chip">Stargazing</div>
-          <div class="chip">Rock art</div>
-          <div class="chip">Braai nights</div>
+          <a class="button light" href="#music">Open playlist</a>
+          <a class="button glass" href="https://drive.google.com/drive/folders/1303l_SMGXM7H-x27RGDhT7H0Z-goqKjf?usp=drive_link" target="_blank" rel="noreferrer">Open photo folder</a>
         </div>
       </div>
     </div>
@@ -1277,7 +1383,7 @@
       <p>Everything in one place: the route, the stay, the meals, the playlist, the activities, and the shared photo album — all shaped around celebrating Dad properly.</p>
       <div class="cta-row">
         <a class="cta" href="https://drive.google.com/drive/folders/1303l_SMGXM7H-x27RGDhT7H0Z-goqKjf?usp=drive_link" target="_blank">Open shared photo folder ↗</a>
-        <a class="cta secondary" href="#itinerary">View itinerary</a>
+        <a class="cta secondary" href="#music">Open playlist</a>
       </div>
     </section>
 
@@ -1412,7 +1518,15 @@
       <div class="card pad closing">
         <div class="kicker">The last word</div>
         <h2 class="section-title" style="justify-content:center;">See you in the Karoo.</h2>
-        <p class="muted">For the stars, the stories, the food, the road, and most importantly — for Dad.</p>
+        <p class="muted closing-copy">For the family time, the sundowners, the stargazing, the braai nights, the roadtrip stories, and that proper Karoo quiet — this is our chance to slow down, celebrate Dad, and make memories we will talk about for years.</p>
+        <div class="closing-points" aria-label="Trip highlights">
+          <span>Sundowners</span>
+          <span>Stargazing</span>
+          <span>Braai nights</span>
+          <span>Family time</span>
+          <span>Roadtrip stories</span>
+          <span>Karoo quiet</span>
+        </div>
       </div>
     </section>
   </main>
@@ -1573,39 +1687,6 @@
 
   <script>
     (function () {
-      const video = document.querySelector(".hero-bg-video");
-      if (!video) return;
-
-      function prepare() {
-        video.muted = true;
-        video.defaultMuted = true;
-        video.playsInline = true;
-        video.setAttribute("muted", "");
-        video.setAttribute("playsinline", "");
-        video.setAttribute("webkit-playsinline", "");
-        video.setAttribute("autoplay", "");
-        video.setAttribute("loop", "");
-      }
-
-      function playHero() {
-        prepare();
-        const p = video.play();
-        if (p && typeof p.catch === "function") p.catch(function(){});
-      }
-
-      prepare();
-      document.addEventListener("DOMContentLoaded", playHero);
-      window.addEventListener("load", playHero);
-      window.addEventListener("pageshow", playHero);
-      ["touchstart","click","scroll"].forEach(function(evt){
-        document.addEventListener(evt, playHero, { once:true, passive:true });
-      });
-    })();
-  </script>
-
-
-  <script>
-    (function () {
       const videos = document.querySelectorAll(".bonfire-video");
       if (!videos.length) return;
 
@@ -1629,6 +1710,39 @@
       window.addEventListener("pageshow", playVideos);
       ["touchstart","click","scroll"].forEach(function(evt){
         document.addEventListener(evt, playVideos, { once:true, passive:true });
+      });
+    })();
+  </script>
+
+
+  <script>
+    (function () {
+      const video = document.querySelector(".hero-bg-video");
+      if (!video) return;
+
+      function prepareAndPlay() {
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.setAttribute("muted", "");
+        video.setAttribute("playsinline", "");
+        video.setAttribute("webkit-playsinline", "");
+        video.setAttribute("autoplay", "");
+        video.setAttribute("loop", "");
+
+        const attempt = video.play();
+        if (attempt && typeof attempt.catch === "function") {
+          attempt.catch(function () {});
+        }
+      }
+
+      prepareAndPlay();
+      document.addEventListener("DOMContentLoaded", prepareAndPlay);
+      window.addEventListener("load", prepareAndPlay);
+      window.addEventListener("pageshow", prepareAndPlay);
+
+      ["touchstart", "pointerdown", "click", "scroll"].forEach(function (eventName) {
+        document.addEventListener(eventName, prepareAndPlay, { once: true, passive: true });
       });
     })();
   </script>
