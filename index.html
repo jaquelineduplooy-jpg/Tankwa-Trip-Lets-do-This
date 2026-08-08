@@ -1339,6 +1339,21 @@
       }
     }
 
+  
+    /* FINAL ELEPHANT MOUSE MOBILE FIT FIX */
+    @media (max-width: 700px) {
+      .hero-bg-video {
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: none !important;
+        animation: none !important;
+      }
+
+      .hero {
+        min-height: 88svh !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1729,20 +1744,16 @@
         video.setAttribute("webkit-playsinline", "");
         video.setAttribute("autoplay", "");
         video.setAttribute("loop", "");
-
         const attempt = video.play();
-        if (attempt && typeof attempt.catch === "function") {
-          attempt.catch(function () {});
-        }
+        if (attempt && typeof attempt.catch === "function") attempt.catch(function(){});
       }
 
       prepareAndPlay();
       document.addEventListener("DOMContentLoaded", prepareAndPlay);
       window.addEventListener("load", prepareAndPlay);
       window.addEventListener("pageshow", prepareAndPlay);
-
-      ["touchstart", "pointerdown", "click", "scroll"].forEach(function (eventName) {
-        document.addEventListener(eventName, prepareAndPlay, { once: true, passive: true });
+      ["touchstart", "pointerdown", "click", "scroll"].forEach(function(evt) {
+        document.addEventListener(evt, prepareAndPlay, { once: true, passive: true });
       });
     })();
   </script>
