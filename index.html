@@ -397,15 +397,6 @@
     .memory-film-card:hover .memory-film-track {
       scroll-behavior: auto !important;
     }
-    .memory-film-card::after {
-      content: "Hover to pause";
-      display: block;
-      margin-top: 8px;
-      color: rgba(255,255,255,.42);
-      font-size: 12px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
 
   
     /* Final polished hero video */
@@ -1354,6 +1345,62 @@
       }
     }
 
+  
+    /* FINAL CREATIVE REVIEW POLISH */
+    .closing {
+      text-align: center !important;
+      background:
+        radial-gradient(circle at top, rgba(255,195,107,.14), transparent 38%),
+        linear-gradient(135deg,#fffdf8,#fff1dc) !important;
+    }
+
+    .closing .section-title {
+      margin-bottom: 20px !important;
+    }
+
+    .closing-copy {
+      max-width: 820px !important;
+      margin: 0 auto 10px !important;
+      font-size: clamp(18px, 1.6vw, 22px) !important;
+      line-height: 1.55 !important;
+      text-align: center !important;
+      text-wrap: balance;
+    }
+
+    .closing-copy-final {
+      max-width: 760px !important;
+      margin-top: 10px !important;
+      font-weight: 650 !important;
+      color: #5f534a !important;
+    }
+
+    .closing-points {
+      display: none !important;
+    }
+
+    @media (max-width: 700px) {
+      .closing {
+        padding: 28px 22px !important;
+      }
+
+      .closing .section-title {
+        font-size: clamp(34px, 9vw, 46px) !important;
+        line-height: 1.05 !important;
+        margin-bottom: 18px !important;
+      }
+
+      .closing-copy {
+        max-width: 100% !important;
+        font-size: 17px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 10px !important;
+      }
+
+      .closing-copy-final {
+        font-size: 17px !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1533,22 +1580,11 @@
       <div class="card pad closing">
         <div class="kicker">The last word</div>
         <h2 class="section-title" style="justify-content:center;">See you in the Karoo.</h2>
-        <p class="muted closing-copy">For the family time, the sundowners, the stargazing, the braai nights, the roadtrip stories, and that proper Karoo quiet — this is our chance to slow down, celebrate Dad, and make memories we will talk about for years.</p>
-        <div class="closing-points" aria-label="Trip highlights">
-          <span>Sundowners</span>
-          <span>Stargazing</span>
-          <span>Braai nights</span>
-          <span>Family time</span>
-          <span>Roadtrip stories</span>
-          <span>Karoo quiet</span>
-        </div>
+        <p class="muted closing-copy">Here’s to family time, sundowners, stargazing, braai nights, roadtrip stories, and the quiet magic of the Karoo.</p>
+        <p class="muted closing-copy closing-copy-final">Most of all, here’s to Dad — the reason we are gathering, celebrating, and making memories together.</p>
       </div>
     </section>
   </main>
-
-  <footer>
-    Upload the good photos here: <a href="https://drive.google.com/drive/folders/1303l_SMGXM7H-x27RGDhT7H0Z-goqKjf?usp=drive_link" target="_blank">shared Google Drive folder</a>.
-  </footer>
 
   <script>
     (function () {
