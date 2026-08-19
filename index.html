@@ -1041,6 +1041,54 @@
       }
     }
 
+  
+    /* SPOTIFY OFFICIAL EMBED FIX */
+    .spotify-player-card,
+    .spotify-cover,
+    .spotify-body,
+    .spotify-topline,
+    .spotify-row,
+    .spotify-progress,
+    .spotify-mark {
+      display: none !important;
+    }
+
+    .soundtrack-clean {
+      display: block !important;
+      padding: 34px !important;
+    }
+
+    .soundtrack-clean .music-copy {
+      max-width: 62ch !important;
+      margin-bottom: 24px !important;
+    }
+
+    .spotify-embed {
+      display: block !important;
+      width: 100% !important;
+      height: 152px !important;
+      border: 0 !important;
+      border-radius: 22px !important;
+      overflow: hidden !important;
+      background: transparent !important;
+      margin-top: 24px !important;
+    }
+
+    .spotify-open-button {
+      margin-top: 18px !important;
+    }
+
+    @media (max-width: 760px) {
+      .soundtrack-clean {
+        padding: 22px !important;
+      }
+
+      .spotify-embed {
+        height: 152px !important;
+        border-radius: 18px !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -1141,21 +1189,15 @@
         <h2 class="section-title" style="color:white;">The playlist for the long road, the sunset, and the late-night laughs.</h2>
         <p class="music-copy">A good weekend needs the right soundtrack. This one should feel warm, nostalgic, slightly wild, and very much like us.</p>
 
-        <a class="spotify-player-card" href="https://open.spotify.com/playlist/0K93afeWZDNAKaFpOeS1Pa" target="_blank" rel="noreferrer" aria-label="Open the Tankwa 70 playlist on Spotify">
-          <div class="spotify-cover">
-            <img src="assets/soundtrack-cover.jpg" alt="" />
-          </div>
-          <div class="spotify-body">
-            <div class="spotify-topline">Spotify playlist</div>
-            <h3>Tankwa 70 — Road to Silence & Celebration</h3>
-            <p>Roadtrip favourites, braai songs, golden-hour tunes, and Dad-approved classics.</p>
-            <div class="spotify-row">
-              <span class="spotify-progress"></span>
-              <span class="spotify-time">Open on Spotify ↗</span>
-            </div>
-          </div>
-          <div class="spotify-mark">♬</div>
-        </a>
+        <iframe
+          class="spotify-embed"
+          title="Tankwa 70 Roadtrip Spotify Playlist"
+          src="https://open.spotify.com/embed/playlist/0K93afeWZDNAKaFpOeS1Pa?utm_source=generator&theme=0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+
+        <a class="button secondary spotify-open-button" href="https://open.spotify.com/playlist/0K93afeWZDNAKaFpOeS1Pa" target="_blank" rel="noreferrer">Open playlist on Spotify ↗</a>
       </div>
     </section>
 
