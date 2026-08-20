@@ -1089,6 +1089,54 @@
       }
     }
 
+  
+    /* FINAL GRAVEL ROAD READY NOTE */
+    .road-note {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 20px 22px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(255,244,223,.96), rgba(255,255,255,.78));
+      border: 1px solid rgba(237,171,95,.42);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.45);
+    }
+
+    .road-note-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: linear-gradient(180deg, var(--navy), var(--navy-2));
+      color: white;
+      font-size: 1.35rem;
+      box-shadow: 0 14px 26px rgba(35,50,74,.18);
+    }
+
+    .road-note strong {
+      display: block;
+      margin: 0 0 6px;
+      font-size: 1.12rem;
+      letter-spacing: -.035em;
+      color: var(--ink);
+    }
+
+    .road-note p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.46;
+    }
+
+    @media (max-width: 620px) {
+      .road-note {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+    }
+
   </style>
 </head>
 
@@ -1166,7 +1214,7 @@
             <div class="route-list">
               <div class="route-stop"><div class="num">1</div><div><h4>Somerset West</h4><p>Early departure, coffee in hand, and the playlist already doing its job.</p></div></div>
               <div class="route-stop"><div class="num">2</div><div><h4>Ceres</h4><p>A practical stop for fuel, snacks, and a quick reset before the scenery shifts.</p></div></div>
-              <div class="route-stop"><div class="num">3</div><div><h4>Tankwa Padstal</h4><p>A proper roadtrip landmark: a leg stretch, a few photos, and something farm-style on the side.</p></div></div>
+              <div class="route-stop"><div class="num">3</div><div><h4>Padstal</h4><p>A proper roadtrip landmark: a leg stretch, a few photos, and something farm-style on the side.</p></div></div>
               <div class="route-stop"><div class="num">4</div><div><h4>Kagga Kamma Nature Reserve</h4><p>The reward: big skies, extraordinary rock formations, Karoo quiet, and celebration mode fully on.</p></div></div>
             </div>
           </div>
@@ -1178,6 +1226,13 @@
               <div class="timeline-item"><strong>13–14 November</strong><div>Slow mornings, stargazing, nature drives, hiking, biking, rock art, pool time, family meals, and proper time together.</div></div>
               <div class="timeline-item"><strong>15 November</strong><div>Breakfast, final photos, check-out, and the roadtrip home with one more good padstal stop on the way back.</div></div>
             </div>
+          </div>
+        </div>
+        <div class="road-note">
+          <div class="road-note-icon">🛞</div>
+          <div>
+            <strong>Gravel road ready</strong>
+            <p>Leave with a full tank, check the spare tyre, download offline maps, keep water in the car, and take the gravel slowly. Keep distance between cars for dust and loose stones, and aim to arrive in daylight.</p>
           </div>
         </div>
       </div>
@@ -1206,8 +1261,9 @@
         <div class="kicker">Food plan</div>
         <h2 class="section-title" style="font-size:clamp(1.9rem,3vw,2.7rem);">Meals worth the drive</h2>
         <div class="timeline-stack">
-          <div class="timeline-item"><strong>Friday night</strong><div>Skaap tjops, wors, pap, smoor, salad, and pot cheesecake to finish.</div></div>
-          <div class="timeline-item"><strong>Saturday</strong><div>Eggs and bacon in the morning, then BBQ chicken tikka, homemade rotis, sambal, and a surprise dessert later on.</div></div>
+          <div class="timeline-item"><strong>Thursday</strong><div>Dinner: Communal Boma — serves a traditional set braai menu.</div></div>
+          <div class="timeline-item"><strong>Friday</strong><div>Breakfast at the lodge. Dinner: skaap tjops, wors, pap, smoor, salad, and dessert.</div></div>
+          <div class="timeline-item"><strong>Saturday</strong><div>Breakfast: beskuit en leftovers. Saturday night: BRAAI.</div></div>
           <div class="timeline-item"><strong>Sunday</strong><div>A proper breakfast before the drive back, with time for one last coffee and one last story.</div></div>
         </div>
       </div>
