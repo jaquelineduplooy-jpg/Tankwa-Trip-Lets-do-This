@@ -1179,7 +1179,22 @@
       }
     }
 
-  </style>
+  
+
+    /* FINAL V2: keep hero date on one line */
+    .hero-meta {
+      white-space: nowrap !important;
+      font-size: clamp(1.45rem, 2.1vw, 2.15rem) !important;
+      max-width: none !important;
+    }
+    @media (max-width: 760px) {
+      .hero-meta {
+        font-size: clamp(1.05rem, 4.8vw, 1.5rem) !important;
+        white-space: nowrap !important;
+      }
+    }
+
+</style>
 </head>
 
 <body>

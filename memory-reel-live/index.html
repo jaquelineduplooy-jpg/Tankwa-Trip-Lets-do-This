@@ -332,6 +332,55 @@
     h1 { font-size:clamp(2.45rem,10vw,4rem); }
     .reel-footer { grid-template-columns:1fr; }
   }
+
+
+  /* FINAL V2: consistent dark navy reel surfaces */
+  html, body {
+    background:#061321 !important;
+  }
+  .screen {
+    background:linear-gradient(145deg,#061321 0%,#0a1b2f 58%,#0d2741 100%) !important;
+  }
+  .main-photo {
+    background:#081a2c !important;
+    border-color:rgba(117,184,237,.24) !important;
+  }
+  .main-photo::before,
+  .main-photo::after {
+    content:none !important;
+    display:none !important;
+  }
+  .reel-panel {
+    background:linear-gradient(145deg,#0a1b2f 0%,#0d2741 54%,#123554 100%) !important;
+  }
+  .strip-wrap {
+    background:#091b2e !important;
+  }
+  .frame {
+    background:#0b2036 !important;
+  }
+  .frame::before {
+    content:none !important;
+    display:none !important;
+  }
+  .reel-stat,
+  .qr-card,
+  .badge {
+    background:rgba(20,60,94,.64) !important;
+  }
+
+
+  .main-photo img {
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    padding:10px !important;
+    animation:none !important;
+    transform:none !important;
+    filter:none !important;
+    image-rendering:auto !important;
+  }
 </style>
 </head>
 <body>
@@ -385,7 +434,7 @@
 
   function upgradeDriveResolution(url) {
     if (!url || typeof url !== "string") return url;
-    return url.replace(/sz=w\d+/g,"sz=w1600").replace(/=w\d+(-h\d+)?/g,"=w1600");
+    return url.replace(/sz=w\d+/g,"sz=w2400").replace(/=w\d+(-h\d+)?/g,"=w2400");
   }
 
   async function loadImages() {
