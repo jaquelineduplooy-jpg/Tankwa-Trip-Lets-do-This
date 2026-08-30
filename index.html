@@ -1179,18 +1179,34 @@
       }
     }
 
-  
-
-    /* FINAL V2: keep hero date on one line */
-    .hero-meta {
-      white-space: nowrap !important;
-      font-size: clamp(1.45rem, 2.1vw, 2.15rem) !important;
-      max-width: none !important;
+    /* FINAL V3: hero event and date on separate lines */
+    .hero-still-rocking .hero-meta {
+      white-space: normal !important;
+      max-width: 760px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .hero-event-line,
+    .hero-date-line {
+      display: block;
+    }
+    .hero-event-line {
+      line-height: 1.08;
+    }
+    .hero-date-line {
+      margin-top: 4px;
+      font-size: .82em;
+      letter-spacing: .01em;
     }
     @media (max-width: 760px) {
-      .hero-meta {
-        font-size: clamp(1.05rem, 4.8vw, 1.5rem) !important;
-        white-space: nowrap !important;
+      .hero-still-rocking .hero-meta {
+        font-size: clamp(1.22rem, 5.3vw, 1.55rem) !important;
+        line-height: 1.08;
+        padding: 0 6px;
+      }
+      .hero-date-line {
+        margin-top: 7px;
+        font-size: .88em;
       }
     }
 
@@ -1217,7 +1233,10 @@
       <div class="hero-card">
         <div class="eyebrow">Celebrating 70 years</div>
         <h1>Still Rocking</h1>
-        <p class="hero-meta">Dad’s 70th at Kagga Kamma • 12-15 November</p>
+        <p class="hero-meta">
+          <span class="hero-event-line">Dad’s 70th at Kagga Kamma</span>
+          <span class="hero-date-line">12-15 November</span>
+        </p>
         <p class="hero-copy">A family roadtrip into big skies, ancient rocks, good food, long conversations and a very special reason to celebrate.</p>
         <p class="hero-tagline">A little wild. A little luxe. Lots of family time. Very South African. Worth the drive.</p>
         <div class="button-row hero-actions">
